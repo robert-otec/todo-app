@@ -5,7 +5,7 @@ label = sg.Text("Type in a todo")
 input_box = sg.InputText(tooltip="Enter a todo", key="todo")
 # The key parameter is used to identify the input box in the event loop.
 add_button = sg.Button("Add")
-list_box = sg.Listbox(values=modules.functions.get_todos(), key="todos",
+list_box = sg.Listbox(values=modules.functions.get_todos().strip("\n"), key="todos",
                       enable_events=True, size=[45, 10])
 edit_button = sg.Button("Edit")
 
